@@ -2,9 +2,6 @@
   <div class="container">
     <div class="dashboard-banner">
       <!-- Graph and legend -->
-        <!-- CoinGeko -->
-        <script src="https://widgets.coingecko.com/coingecko-coin-ticker-widget.js"></script>
-        <coingecko-coin-ticker-widget currency="usd" coin-id="block-commerce-protocol" locale="en"></coingecko-coin-ticker-widget>
         <!-- Legend -->
         <script>
          numChartData = <%= Enum.reduce(@chart_config, 0, fn (source, acc) ->
@@ -12,6 +9,9 @@
          document.documentElement.style.setProperty("--numChartData", numChartData);
         </script>
         <div class="dashboard-banner-chart-legend">
+          <!-- CoinGeko -->
+          <script src="https://widgets.coingecko.com/coingecko-coin-ticker-widget.js"></script>
+          <coingecko-coin-ticker-widget currency="usd" coin-id="block-commerce-protocol" locale="en"></coingecko-coin-ticker-widget>
           <%= if Map.has_key?(@chart_config, :market) do %>
 
             <%# THE FOLLOWING LINE PREVENTS COPY/PASTE ERRORS %>
