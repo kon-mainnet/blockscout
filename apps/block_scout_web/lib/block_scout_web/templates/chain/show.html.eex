@@ -4,9 +4,7 @@
       <!-- Graph and legend -->
         <!-- CoinGeko -->
         <script src="https://widgets.coingecko.com/coingecko-coin-ticker-widget.js"></script>
-        <div class="dashboard-banner-chart-legend">
-          <coingecko-coin-ticker-widget currency="usd" coin-id="block-commerce-protocol" locale="en"></coingecko-coin-ticker-widget>
-        </div>
+        <coingecko-coin-ticker-widget currency="usd" coin-id="block-commerce-protocol" locale="en"></coingecko-coin-ticker-widget>
         <!-- Legend -->
         <script>
          numChartData = <%= Enum.reduce(@chart_config, 0, fn (source, acc) ->
