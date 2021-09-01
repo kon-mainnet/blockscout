@@ -34,6 +34,7 @@
 
     <%= render_existing(@view_module, "_metatags.html", assigns) || render("_default_title.html") %>
 
+    <script src="https://widgets.coingecko.com/coingecko-coin-ticker-widget.js"></script>
     <script defer data-cfasync="false">
       window.localized = {
         'Blocks Indexed': '<%= gettext("Blocks Indexed") %>',

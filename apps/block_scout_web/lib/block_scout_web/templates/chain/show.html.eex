@@ -8,7 +8,6 @@
           <button data-chart-error-message class="alert alert-danger col-12 text-left mt-5" style="display: none;">
             <span><%= gettext("There was a problem loading the chart.") %></span>
           </button>
-          <script src="https://widgets.coingecko.com/coingecko-coin-ticker-widget.js"></script>
           <coingecko-coin-ticker-widget currency="usd" coin-id="block-commerce-protocol" locale="en"></coingecko-coin-ticker-widget>
           <!--
           <canvas data-chart="historyChart"
