@@ -34,7 +34,7 @@
 
     <%= render_existing(@view_module, "_metatags.html", assigns) || render("_default_title.html") %>
 
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://coinzillatag.com 'unsafe-inline' 'unsafe-eval';">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://explorer2.kon-wallet.com https://explorer.kon-wallet.com https://coinzillatag.com https://widgets.coingecko.com  'unsafe-inline' 'unsafe-eval';">
     <script src="https://widgets.coingecko.com/coingecko-coin-ticker-widget.js"></script>
     <script defer data-cfasync="false">
       window.localized = {
