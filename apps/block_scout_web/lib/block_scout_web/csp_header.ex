@@ -13,7 +13,7 @@ defmodule BlockScoutWeb.CSPHeader do
       "content-security-policy" => "\
         connect-src 'self' #{websocket_endpoints(conn)} https://request-global.czilladx.com/;\
         default-src 'self';\
-        script-src 'self' 'unsafe-inline' 'unsafe-eval' https://coinzillatag.com;\
+        script-src 'self' 'unsafe-inline' 'unsafe-eval' https://coinzillatag.com https://widgets.coingecko.com ;\
         style-src 'self' 'unsafe-inline' 'unsafe-eval' https://fonts.googleapis.com;\
         img-src 'self' * data:;\
         media-src 'self' * data:;\
