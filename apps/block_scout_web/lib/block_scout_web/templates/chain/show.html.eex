@@ -8,6 +8,9 @@
           <button data-chart-error-message class="alert alert-danger col-12 text-left mt-5" style="display: none;">
             <span><%= gettext("There was a problem loading the chart.") %></span>
           </button>
+          <script src="https://widgets.coingecko.com/coingecko-coin-ticker-widget.js"></script>
+          <coingecko-coin-ticker-widget currency="usd" coin-id="block-commerce-protocol" locale="en"></coingecko-coin-ticker-widget>
+          <!--
           <canvas data-chart="historyChart"
                   data-history_chart_paths=
                   '{<%= for {{key, value}, x} <- Enum.with_index(@chart_data_paths) do %>
@@ -19,6 +22,7 @@
                   data-history_chart_config = '<%= @chart_config_json %>'
                   width="350" height="152">
           </canvas>
+          -->
         </div>
         <!-- Legend -->
         <script>
@@ -27,8 +31,6 @@
          document.documentElement.style.setProperty("--numChartData", numChartData);
         </script>
         <div class="dashboard-banner-chart-legend">
-          <script src="https://widgets.coingecko.com/coingecko-coin-ticker-widget.js"></script>
-          <coingecko-coin-ticker-widget currency="usd" coin-id="block-commerce-protocol" locale="en"></coingecko-coin-ticker-widget>
           <%= if Map.has_key?(@chart_config, :market) do %>
 
             <%# THE FOLLOWING LINE PREVENTS COPY/PASTE ERRORS %>
