@@ -9,7 +9,7 @@
             <span><%= gettext("There was a problem loading the chart.") %></span>
           </button>
           <!-- <coingecko-coin-ticker-widget currency="usd" coin-id="block-commerce-protocol" locale="en" height="300"></coingecko-coin-ticker-widget> -->
-          <img height="300px" width="auto" src="<%= static_path(@conn, "/images/kon-logo-narrow.png") %>" />
+          <img height="100px" width="auto" src="<%= static_path(@conn, "/images/kon-logo-narrow.png") %>" />
           <!--
           <canvas data-chart="historyChart"
                   data-history_chart_paths=
