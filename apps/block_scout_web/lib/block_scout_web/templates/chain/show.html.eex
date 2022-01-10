@@ -9,7 +9,9 @@
             <span><%= gettext("There was a problem loading the chart.") %></span>
           </button>
           <!-- <coingecko-coin-ticker-widget currency="usd" coin-id="block-commerce-protocol" locale="en" height="300"></coingecko-coin-ticker-widget> -->
-          <img height="200px" width="auto" src="<%= static_path(@conn, "/images/kon-logo-narrow.png") %>" />
+          <a href="/tokens/0x716c2ECca2cD5f42B20D52417A321ce3b76d3a0c/token-transfers">
+            <img height="200px" width="auto" src="<%= static_path(@conn, "/images/kon-logo-narrow.png") %>" />
+          </a>
           <!--
           <canvas data-chart="historyChart"
                   data-history_chart_paths=
