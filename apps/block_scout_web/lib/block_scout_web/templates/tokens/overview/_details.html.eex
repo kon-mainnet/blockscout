@@ -68,7 +68,7 @@
               <% end %>
             </span>
             <div class="d-flex flex-row justify-content-start text-muted">
-              <span class="mr-4"> <%= @token.type = "ERC-20" ? "KON-20" : @token.type %> </span>
+              <span class="mr-4"> <%= if @token.type = "ERC-20", do: "KON-20", else: @token.type %> </span>
               <span token-holder-count class="mr-4"></span>
               <span token-transfer-count class="mr-4"></span>
               <%= if decimals?(@token) do %>
