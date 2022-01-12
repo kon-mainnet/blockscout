@@ -69,7 +69,7 @@
             </span>
             <div class="d-flex flex-row justify-content-start text-muted">
               <span class="mr-4">
-              <%= if @token.type = "ERC-20" do%>
+              <%= if @token.type == "ERC-20" do%>
                 <%= gettext "KON-20" %>
               <% else %>
                 <%= @token.type %>
