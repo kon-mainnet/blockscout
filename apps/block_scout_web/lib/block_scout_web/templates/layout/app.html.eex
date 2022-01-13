@@ -30,11 +30,11 @@
     <link rel="apple-touch-icon" sizes="72x72" href="<%= static_path(@conn, "/images/apple-icon-72x72.png") %>">
     <link rel="apple-touch-icon" sizes="60x60" href="<%= static_path(@conn, "/images/apple-icon-60x60.png") %>">
     <link rel="apple-touch-icon" sizes="57x57" href="<%= static_path(@conn, "/images/apple-icon-57x57.png") %>">
-    <link rel="shortcut icon" type='image/x-icon' href="<%= static_path(@conn, "/images/android-icon-36x36.png") %>">
-    <link rel="shortcut icon" type='image/x-icon' href="<%= static_path(@conn, "/images/android-icon-48x48.png") %>">
-    <link rel="shortcut icon" type='image/x-icon' href="<%= static_path(@conn, "/images/android-icon-72x72.png") %>">
-    <link rel="shortcut icon" type='image/x-icon' href="<%= static_path(@conn, "/images/android-icon-144x144.png") %>">
-    <link rel="shortcut icon" type='image/x-icon' href="<%= static_path(@conn, "/images/android-icon-192x192.png") %>">
+    <link rel="shortcut icon" href="<%= static_path(@conn, "/images/android-icon-36x36.png") %>">
+    <link rel="shortcut icon" href="<%= static_path(@conn, "/images/android-icon-48x48.png") %>">
+    <link rel="shortcut icon" href="<%= static_path(@conn, "/images/android-icon-72x72.png") %>">
+    <link rel="shortcut icon" href="<%= static_path(@conn, "/images/android-icon-144x144.png") %>">
+    <link rel="shortcut icon" href="<%= static_path(@conn, "/images/android-icon-192x192.png") %>">
     <link rel="icon" type="image/png" sizes="32x32" href="<%= static_path(@conn, "/images/favicon-32x32.png") %>">
     <link rel="icon" type="image/png" sizes="16x16" href="<%= static_path(@conn, "/images/favicon-16x16.png") %>">
     <link rel="manifest" href="<%= static_path(@conn, "/manifest.webmanifest") %>">
