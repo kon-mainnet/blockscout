@@ -100,7 +100,10 @@
                 })
               }
             </script>
-            <a onClick="addNetwork()">
+            <a href="#" onClick="addNetwork()" role="button" id="navbarNetworkAdd" class="nav-link topnav-nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="nav-link-icon">
+                <%= render BlockScoutWeb.IconsView, "_tokens_icon.html" %>
+              </span>
               <%= gettext("Add KON Network") %>
             </a>
           </li>
