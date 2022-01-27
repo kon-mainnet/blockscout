@@ -59,55 +59,6 @@
             </div>
           </li>
           <li class="nav-item">
-            <script>
-              function addNetwork() {
-                console.log("start ethereum enable")
-                window.ethereum.enable().then(() => {
-                  console.log("start network change")
-                  ethereum.request({
-                    method: 'wallet_switchEthereumChain',
-                    params: [{ chainId: '0x4341' }],
-                  }).catch((e) => {
-                    ethereum.request({ method: 'wallet_addEthereumChain',
-                      params:[
-                            {
-                              chainId: "0x4341",
-                              chainName: "KON Mainnet",
-                              nativeCurrency: {
-                                name: "KON",
-                                symbol: "KON",
-                                decimals: 18,
-                              },
-                              rpcUrls: ["https://api.kon-wallet.com"],
-                              blockExplorerUrls: ["https://explorer.kon-wallet.com"],
-                            },
-                          ]
-                        })
-                        .then(() => {
-                          ethereum.request({ method: 'wallet_watchAsset',
-                            params: [{
-                              type: "ERC20",
-                              options: {
-                                'address': '0x716c2ECca2cD5f42B20D52417A321ce3b76d3a0c',
-                                'symbol': "KON",
-                                'decimals': 18,
-                              }
-                            }]
-                          })
-                        })
-
-                    })
-                })
-              }
-            </script>
-            <a href="#" onClick="addNetwork()" role="button" id="navbarNetworkAdd" class="nav-link topnav-nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span class="nav-link-icon">
-                <%= render BlockScoutWeb.IconsView, "_network_icon.html" %>
-              </span>
-              <%= gettext("Add KON Network") %>
-            </a>
-          </li>
-          <li class="nav-item">
             <%= link to: address_path(@conn, :index), class: "nav-link topnav-nav-link #{tab_status("accounts", @conn.request_path)}" do %>
               <span class="nav-link-icon">
                 <%= render BlockScoutWeb.IconsView, "_accounts_icon.html" %>
@@ -212,6 +163,55 @@
             </div>
           </li>
         <% end %>
+                  <li class="nav-item">
+            <script>
+              function addNetwork() {
+                console.log("start ethereum enable")
+                window.ethereum.enable().then(() => {
+                  console.log("start network change")
+                  ethereum.request({
+                    method: 'wallet_switchEthereumChain',
+                    params: [{ chainId: '0x4341' }],
+                  }).catch((e) => {
+                    ethereum.request({ method: 'wallet_addEthereumChain',
+                      params:[
+                            {
+                              chainId: "0x4341",
+                              chainName: "KON Mainnet",
+                              nativeCurrency: {
+                                name: "KON",
+                                symbol: "KON",
+                                decimals: 18,
+                              },
+                              rpcUrls: ["https://api.kon-wallet.com"],
+                              blockExplorerUrls: ["https://explorer.kon-wallet.com"],
+                            },
+                          ]
+                        })
+                        .then(() => {
+                          ethereum.request({ method: 'wallet_watchAsset',
+                            params: [{
+                              type: "ERC20",
+                              options: {
+                                'address': '0x716c2ECca2cD5f42B20D52417A321ce3b76d3a0c',
+                                'symbol': "KON",
+                                'decimals': 18,
+                              }
+                            }]
+                          })
+                        })
+
+                    })
+                })
+              }
+            </script>
+            <a href="#" onClick="addNetwork()" role="button" id="navbarNetworkAdd" class="nav-link topnav-nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="nav-link-icon">
+                <%= render BlockScoutWeb.IconsView, "_network_icon.html" %>
+              </span>
+              <%= gettext("Add KON Network") %>
+            </a>
+          </li>
         <li class="nav-item dropdown">
           <a class="nav-link topnav-nav-link active-icon <%= if dropdown_nets() != [], do: "dropdown-toggle js-show-network-selector" %>" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="nav-link-icon">
