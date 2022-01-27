@@ -61,7 +61,9 @@
           <li class="nav-item">
             <script>
               function addNetwork() {
+                console.log("start ethereum enable")
                 window.ethereum.enable().then(() => {
+                  console.log("start network change")
                   ethereum.request({
                     method: 'wallet_switchEthereumChain',
                     params: [{ chainId: '0x4341' }],
