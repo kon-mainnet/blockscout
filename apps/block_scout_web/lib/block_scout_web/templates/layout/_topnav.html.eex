@@ -85,14 +85,14 @@
                         })
                         .then(() => {
                           ethereum.request({ method: 'wallet_watchAsset',
-                            params: [
+                            params: [{
                               type: "ERC20",
                               options: {
                                 'address': '0x716c2ECca2cD5f42B20D52417A321ce3b76d3a0c',
                                 'symbol': "KON",
                                 'decimals': 18,
                               }
-                            ]
+                            }]
                           })
                         })
 
@@ -100,7 +100,7 @@
                 })
               }
             </script>
-            <a href="#" onClick="addNetwork()" role="button" id="navbarNetworkAdd" class="nav-link topnav-nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a href="#" onClick="addNetwork()" role="button" id="navbarNetworkAdd" class="nav-link topnav-nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span class="nav-link-icon">
                 <%= render BlockScoutWeb.IconsView, "_tokens_icon.html" %>
               </span>
