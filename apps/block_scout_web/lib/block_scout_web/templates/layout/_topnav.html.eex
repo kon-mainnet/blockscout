@@ -177,10 +177,10 @@
                       params:[
                             {
                               chainId: "0x4341",
-                              chainName: "KON Mainnet",
+                              chainName: "KONET Mainnet",
                               nativeCurrency: {
-                                name: "KON",
-                                symbol: "KON",
+                                name: "KONET",
+                                symbol: "KONET",
                                 decimals: 18,
                               },
                               rpcUrls: ["https://api.kon-wallet.com"],
