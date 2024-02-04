@@ -3,7 +3,7 @@ $primary: #011EC8;
 $secondary: #87edff;
 $tertiary: #122784;
 $additional-font: #eee;
-$sub-accent-color: #1c9f90;
+$sub-accent-color: #122784;
 
 // footer
 $footer-background-color: $primary;
@@ -30,7 +30,7 @@ $dashboard-banner-gradient-start: $primary; // gradient begin
 
 $dashboard-banner-gradient-end: lighten($primary, 5); // gradient end
 
-$dashboard-banner-network-plain-container-background-color: #0e534a; // stats bg
+$dashboard-banner-network-plain-container-background-color: #122784; // stats bg
 
 
 // navigation
