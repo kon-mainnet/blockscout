@@ -209,7 +209,7 @@
               <span class="nav-link-icon">
                 <%= render BlockScoutWeb.IconsView, "_network_icon.html" %>
               </span>
-              <%= gettext("Add KON Network") %>
+              <%= gettext("Add KONET Network") %>
             </a>
           </li>
         <li class="nav-item dropdown">
