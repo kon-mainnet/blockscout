@@ -203,6 +203,7 @@ $dashboard-banner-chart-axis-font-color-alt: #333;
     width: 100%;
   }
 
+  /*
   &::after {
     background-color: $dashboard-banner-network-plain-container-background-color;
     bottom: 0;
@@ -220,6 +221,7 @@ $dashboard-banner-chart-axis-font-color-alt: #333;
       display: none;
     }
   }
+  */
 }
 
 .dashboard-banner-network-stats {
