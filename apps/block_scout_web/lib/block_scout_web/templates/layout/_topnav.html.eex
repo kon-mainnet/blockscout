@@ -212,13 +212,11 @@
               <%= gettext("Add KONET Network") %>
             </a>
           </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item">
           <a class="nav-link topnav-nav-link active-icon <%= if dropdown_nets() != [], do: "dropdown-toggle js-show-network-selector" %>" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <!--
             <span class="nav-link-icon">
               <%= render BlockScoutWeb.IconsView, "_active_icon.html" %>
             </span>
-            -->
             <%= subnetwork_title() %>
           </a>
           <!--
