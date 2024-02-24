@@ -1,7 +1,7 @@
 <%= if assigns[:transaction] do %>
   <title>
     <%= gettext(
-          "Transaction %{transaction} - %{subnetwork} Explorer",
+          "Transaction %{transaction} - KONET Scan",
           transaction: to_string(@transaction.hash),
           subnetwork: BlockScoutWeb.LayoutView.subnetwork_title()
         ) %>
