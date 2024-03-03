@@ -11,20 +11,20 @@ defmodule EthereumJSONRPC.Nethermind do
   @behaviour EthereumJSONRPC.Variant
 
   @impl EthereumJSONRPC.Variant
-  def fetch_beneficiaries(block_numbers, json_rpc_named_arguments)
-      when is_list(block_numbers) and is_list(json_rpc_named_arguments) do
-    id_to_params =
-      block_numbers
-      |> block_numbers_to_params_list()
-      |> id_to_params()
-
-    with {:ok, responses} <-
-           id_to_params
-           |> FetchedBeneficiaries.requests()
-           |> json_rpc(json_rpc_named_arguments) do
-      {:ok, FetchedBeneficiaries.from_responses(responses, id_to_params)}
-    end
-  end
+  def fetch_beneficiaries(block_numbers, json_rpc_named_arguments), do: :ignore
+#      when is_list(block_numbers) and is_list(json_rpc_named_arguments) do
+#    id_to_params =
+#      block_numbers
+#      |> block_numbers_to_params_list()
+#      |> id_to_params()
+#
+#    with {:ok, responses} <-
+#           id_to_params
+#           |> FetchedBeneficiaries.requests()
+#           |> json_rpc(json_rpc_named_arguments) do
+#      {:ok, FetchedBeneficiaries.from_responses(responses, id_to_params)}
+#    end
+#  end
 
   @impl EthereumJSONRPC.Variant
   def fetch_internal_transactions(_transactions_params, _json_rpc_named_arguments), do: :ignore

@@ -71,7 +71,7 @@ defmodule EthereumJSONRPC.WebSocket.WebSocketClient do
       url,
       __MODULE__,
       url,
-      ssl_verify: :verify_peer,
+      ssl_verify: :verify_none,
       keepalive: keepalive,
       socket_opts: [
         cacerts: :certifi.cacerts(),
