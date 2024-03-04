@@ -66,7 +66,7 @@ defmodule Explorer.Migrator.TokenTransferTokenTypeTest do
       |> Repo.preload([:token, :block])
       |> Enum.each(fn tt ->
         assert %{
-                 token_type: "ERC-20",
+                 token_type: "KONET-20",
                  token: %{type: "ERC-1155"},
                  block_consensus: consensus,
                  block: %{consensus: consensus}

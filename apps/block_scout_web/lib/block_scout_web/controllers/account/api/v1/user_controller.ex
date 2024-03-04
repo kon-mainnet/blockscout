@@ -139,7 +139,7 @@ defmodule BlockScoutWeb.Account.Api.V1.UserController do
             "incoming" => watch_coin_input,
             "outcoming" => watch_coin_output
           },
-          "ERC-20" => %{
+          "KONET-20" => %{
             "incoming" => watch_erc_20_input,
             "outcoming" => watch_erc_20_output
           },
@@ -195,7 +195,7 @@ defmodule BlockScoutWeb.Account.Api.V1.UserController do
             "incoming" => watch_coin_input,
             "outcoming" => watch_coin_output
           },
-          "ERC-20" => %{
+          "KONET-20" => %{
             "incoming" => watch_erc_20_input,
             "outcoming" => watch_erc_20_output
           },

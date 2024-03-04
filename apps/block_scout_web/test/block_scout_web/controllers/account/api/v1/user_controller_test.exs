@@ -1211,7 +1211,7 @@ defmodule BlockScoutWeb.Account.Api.V1.UserControllerTest do
         "incoming" => watchlist.watch_coin_input,
         "outcoming" => watchlist.watch_coin_output
       },
-      "ERC-20" => %{
+      "KONET-20" => %{
         "incoming" => watchlist.watch_erc_20_input,
         "outcoming" => watchlist.watch_erc_20_output
       },

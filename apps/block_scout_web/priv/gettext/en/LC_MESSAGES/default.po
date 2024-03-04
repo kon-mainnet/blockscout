@@ -1193,12 +1193,12 @@ msgstr ""
 
 #: lib/block_scout_web/views/transaction_view.ex:223
 #, elixir-autogen, elixir-format
-msgid "ERC-20 "
+msgid "KONET-20 "
 msgstr ""
 
 #: lib/block_scout_web/templates/account/watchlist_address/form.html.eex:40
 #, elixir-autogen, elixir-format
-msgid "ERC-20 tokens (beta)"
+msgid "KONET-20 tokens (beta)"
 msgstr ""
 
 #: lib/block_scout_web/views/transaction_view.ex:224
@@ -2388,7 +2388,7 @@ msgstr ""
 
 #: lib/block_scout_web/templates/address_token/overview.html.eex:59
 #, elixir-autogen, elixir-format
-msgid "Shows the tokens held in the address (includes ERC-20, ERC-721 and ERC-1155)."
+msgid "Shows the tokens held in the address (includes KONET-20, ERC-721 and ERC-1155)."
 msgstr ""
 
 #: lib/block_scout_web/templates/address_token/overview.html.eex:66

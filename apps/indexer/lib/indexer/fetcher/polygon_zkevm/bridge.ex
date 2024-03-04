@@ -354,7 +354,7 @@ defmodule Indexer.Fetcher.PolygonZkevm.Bridge do
 
     if !Enum.empty?(error_messages) or Enum.count(requests) != Enum.count(responses) do
       Logger.warning(
-        "Cannot read symbol and decimals of an ERC-20 token contract. Error messages: #{Enum.join(error_messages, ", ")}. Addresses: #{Enum.join(token_addresses, ", ")}"
+        "Cannot read symbol and decimals of an KONET-20 token contract. Error messages: #{Enum.join(error_messages, ", ")}. Addresses: #{Enum.join(token_addresses, ", ")}"
       )
     end
 

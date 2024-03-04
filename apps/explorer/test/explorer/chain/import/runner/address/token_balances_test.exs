@@ -31,7 +31,7 @@ defmodule Explorer.Chain.Import.Runner.Address.TokenBalancesTest do
         value: value,
         value_fetched_at: value_fetched_at,
         token_id: 11,
-        token_type: "ERC-20"
+        token_type: "KONET-20"
       }
 
       assert {:ok,
@@ -74,7 +74,7 @@ defmodule Explorer.Chain.Import.Runner.Address.TokenBalancesTest do
         value: nil,
         value_fetched_at: value_fetched_at,
         token_id: nil,
-        token_type: "ERC-20"
+        token_type: "KONET-20"
       }
 
       assert {:ok,

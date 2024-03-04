@@ -149,7 +149,7 @@ defmodule Explorer.Chain.ImportTest do
         params: [
           %{
             contract_address_hash: "0x8bf38d4764929064f2d4d3a56520a76ab3df415b",
-            type: "ERC-20"
+            type: "KONET-20"
           }
         ],
         timeout: 5
@@ -164,7 +164,7 @@ defmodule Explorer.Chain.ImportTest do
             from_address_hash: "0xe8ddc5c7a2d2f0d7a9798459c0104fdf5e987aca",
             to_address_hash: "0x515c09c5bba1ed566b02a5b0599ec5d5d0aee73d",
             token_contract_address_hash: "0x8bf38d4764929064f2d4d3a56520a76ab3df415b",
-            token_type: "ERC-20",
+            token_type: "KONET-20",
             transaction_hash: "0x53bd884872de3e488692881baeec262e7b95234d3965248c39fe992fffd433e5"
           }
         ],
@@ -330,7 +330,7 @@ defmodule Explorer.Chain.ImportTest do
                         <<139, 243, 141, 71, 100, 146, 144, 100, 242, 212, 211, 165, 101, 32, 167, 106, 179, 223, 65,
                           91>>
                     },
-                    type: "ERC-20",
+                    type: "KONET-20",
                     inserted_at: %{},
                     updated_at: %{}
                   }
@@ -364,7 +364,7 @@ defmodule Explorer.Chain.ImportTest do
                     },
                     inserted_at: %{},
                     updated_at: %{},
-                    token_type: "ERC-20"
+                    token_type: "KONET-20"
                   }
                 ]
               }} = Import.all(@import_data)
@@ -398,7 +398,7 @@ defmodule Explorer.Chain.ImportTest do
           params: [
             %{
               contract_address_hash: "0x8bf38d4764929064f2d4d3a56520a76ab3df415b",
-              type: "ERC-20"
+              type: "KONET-20"
             }
           ],
           timeout: 5
@@ -409,19 +409,19 @@ defmodule Explorer.Chain.ImportTest do
               address_hash: "0xe8ddc5c7a2d2f0d7a9798459c0104fdf5e987aca",
               token_contract_address_hash: "0x8bf38d4764929064f2d4d3a56520a76ab3df415b",
               block_number: "37",
-              token_type: "ERC-20"
+              token_type: "KONET-20"
             },
             %{
               address_hash: "0x515c09c5bba1ed566b02a5b0599ec5d5d0aee73d",
               token_contract_address_hash: "0x8bf38d4764929064f2d4d3a56520a76ab3df415b",
               block_number: "37",
-              token_type: "ERC-20"
+              token_type: "KONET-20"
             },
             %{
               address_hash: "0x8bf38d4764929064f2d4d3a56520a76ab3df415b",
               token_contract_address_hash: "0x8bf38d4764929064f2d4d3a56520a76ab3df415b",
               block_number: "37",
-              token_type: "ERC-20"
+              token_type: "KONET-20"
             }
           ],
           timeout: 5
@@ -450,7 +450,7 @@ defmodule Explorer.Chain.ImportTest do
           params: [
             %{
               contract_address_hash: "0x8bf38d4764929064f2d4d3a56520a76ab3df415b",
-              type: "ERC-20"
+              type: "KONET-20"
             }
           ],
           timeout: 5
@@ -462,14 +462,14 @@ defmodule Explorer.Chain.ImportTest do
               token_contract_address_hash: "0x8bf38d4764929064f2d4d3a56520a76ab3df415b",
               block_number: "37",
               value: 200,
-              token_type: "ERC-20"
+              token_type: "KONET-20"
             },
             %{
               address_hash: "0x515c09c5bba1ed566b02a5b0599ec5d5d0aee73d",
               token_contract_address_hash: "0x8bf38d4764929064f2d4d3a56520a76ab3df415b",
               block_number: "37",
               value: 100,
-              token_type: "ERC-20"
+              token_type: "KONET-20"
             }
           ],
           timeout: 5
@@ -1605,8 +1605,8 @@ defmodule Explorer.Chain.ImportTest do
                  },
                  address_coin_balances: %{
                    params: [
-                     %{address_hash: miner_hash, block_number: block_number, value: nil, token_type: "ERC-20"},
-                     %{address_hash: uncle_miner_hash, block_number: block_number, value: nil, token_type: "ERC-20"}
+                     %{address_hash: miner_hash, block_number: block_number, value: nil, token_type: "KONET-20"},
+                     %{address_hash: uncle_miner_hash, block_number: block_number, value: nil, token_type: "KONET-20"}
                    ],
                    timeout: 1
                  },
@@ -2292,7 +2292,7 @@ defmodule Explorer.Chain.ImportTest do
                        token_contract_address_hash: token_contract_address_hash,
                        block_number: block_number,
                        value: value_after,
-                       token_type: "ERC-20"
+                       token_type: "KONET-20"
                      }
                    ]
                  },
@@ -2303,7 +2303,7 @@ defmodule Explorer.Chain.ImportTest do
                        token_contract_address_hash: token_contract_address_hash,
                        block_number: block_number,
                        value: value_after,
-                       token_type: "ERC-20"
+                       token_type: "KONET-20"
                      }
                    ]
                  },

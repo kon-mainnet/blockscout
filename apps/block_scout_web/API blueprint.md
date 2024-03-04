@@ -527,7 +527,7 @@ HOST:http://blockscout.com/poa/core
                   "outcoming": true,
                   "incoming": false
                 },
-                "ERC-20": {
+                "KONET-20": {
                   "outcoming": true,
                   "incoming": true
                 }
@@ -562,7 +562,7 @@ HOST:http://blockscout.com/poa/core
                   "outcoming": true,
                   "incoming": false
                 },
-                "ERC-20": {
+                "KONET-20": {
                   "outcoming": true,
                   "incoming": true
                 }
@@ -620,7 +620,7 @@ HOST:http://blockscout.com/poa/core
                     "outcoming": true,
                     "incoming": false
                   },
-                  "ERC-20": {
+                  "KONET-20": {
                     "outcoming": false,
                     "incoming": false
                   }
@@ -654,7 +654,7 @@ HOST:http://blockscout.com/poa/core
                     "outcoming": true,
                     "incoming": false
                   },
-                  "ERC-20": {
+                  "KONET-20": {
                     "outcoming": true,
                     "incoming": true
                   }
@@ -737,7 +737,7 @@ HOST:http://blockscout.com/poa/core
                   "outcoming": false,
                   "incoming": true
                 },
-                "ERC-20": {
+                "KONET-20": {
                   "outcoming": false,
                   "incoming": true
                 }
@@ -772,7 +772,7 @@ HOST:http://blockscout.com/poa/core
                   "outcoming": false,
                   "incoming": true
                 },
-                "ERC-20": {
+                "KONET-20": {
                   "outcoming": false,
                   "incoming": true
                 }
@@ -820,7 +820,7 @@ HOST:http://blockscout.com/poa/core
                   "outcoming": false,
                   "incoming": true
                 },
-                "ERC-20": {
+                "KONET-20": {
                   "outcoming": false,
                   "incoming": true
                 }
@@ -880,7 +880,7 @@ HOST:http://blockscout.com/poa/core
                   "outcoming": false,
                   "incoming": true
                 },
-                "ERC-20": {
+                "KONET-20": {
                   "outcoming": false,
                   "incoming": true
                 }

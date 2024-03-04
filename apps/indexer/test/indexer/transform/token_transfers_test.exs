@@ -79,11 +79,11 @@ defmodule Indexer.Transform.TokenTransfersTest do
           },
           %{
             contract_address_hash: log_1.address_hash,
-            type: "ERC-20"
+            type: "KONET-20"
           },
           %{
             contract_address_hash: weth_withdrawal_log.address_hash,
-            type: "ERC-20"
+            type: "KONET-20"
           }
         ],
         token_transfers: [
@@ -107,7 +107,7 @@ defmodule Indexer.Transform.TokenTransfersTest do
             to_address_hash: truncated_hash(log_1.third_topic),
             token_contract_address_hash: log_1.address_hash,
             transaction_hash: log_1.transaction_hash,
-            token_type: "ERC-20",
+            token_type: "KONET-20",
             block_hash: log_1.block_hash
           },
           %{
@@ -119,7 +119,7 @@ defmodule Indexer.Transform.TokenTransfersTest do
             to_address_hash: "0x0000000000000000000000000000000000000000",
             token_contract_address_hash: weth_withdrawal_log.address_hash,
             token_ids: nil,
-            token_type: "ERC-20",
+            token_type: "KONET-20",
             transaction_hash: weth_withdrawal_log.transaction_hash
           },
           %{
@@ -131,7 +131,7 @@ defmodule Indexer.Transform.TokenTransfersTest do
             to_address_hash: truncated_hash(weth_deposit_log.second_topic),
             token_contract_address_hash: weth_deposit_log.address_hash,
             token_ids: nil,
-            token_type: "ERC-20",
+            token_type: "KONET-20",
             transaction_hash: weth_deposit_log.transaction_hash
           }
         ]
@@ -313,7 +313,7 @@ defmodule Indexer.Transform.TokenTransfersTest do
       }
 
       assert %{
-               token_transfers: [%{token_contract_address_hash: ^contract_address_hash, token_type: "ERC-20"}],
+               token_transfers: [%{token_contract_address_hash: ^contract_address_hash, token_type: "KONET-20"}],
                tokens: [%{contract_address_hash: ^contract_address_hash, type: "ERC-1155"}]
              } = TokenTransfers.parse([log])
     end
@@ -352,7 +352,7 @@ defmodule Indexer.Transform.TokenTransfersTest do
       assert %{
                token_transfers: [
                  %{token_contract_address_hash: ^contract_address_hash, token_type: "ERC-1155"},
-                 %{token_contract_address_hash: ^contract_address_hash, token_type: "ERC-20"}
+                 %{token_contract_address_hash: ^contract_address_hash, token_type: "KONET-20"}
                ],
                tokens: [%{contract_address_hash: ^contract_address_hash, type: "ERC-1155"}]
              } = TokenTransfers.parse(logs)

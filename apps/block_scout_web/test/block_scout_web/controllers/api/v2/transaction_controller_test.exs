@@ -604,7 +604,7 @@ defmodule BlockScoutWeb.API.V2.TransactionControllerTest do
         end
         |> Enum.reverse()
 
-      erc_20_token = insert(:token, type: "ERC-20")
+      erc_20_token = insert(:token, type: "KONET-20")
 
       erc_20_tt =
         for _ <- 0..50 do
@@ -613,13 +613,13 @@ defmodule BlockScoutWeb.API.V2.TransactionControllerTest do
             block: tx.block,
             block_number: tx.block_number,
             token_contract_address: erc_20_token.contract_address,
-            token_type: "ERC-20"
+            token_type: "KONET-20"
           )
         end
         |> Enum.reverse()
 
-      # -- ERC-20 --
-      filter = %{"type" => "ERC-20"}
+      # -- KONET-20 --
+      filter = %{"type" => "KONET-20"}
       request = get(conn, "/api/v2/transactions/#{to_string(tx.hash)}/token-transfers", filter)
       assert response = json_response(request, 200)
 
@@ -670,7 +670,7 @@ defmodule BlockScoutWeb.API.V2.TransactionControllerTest do
       # -- ------ --
 
       # two filters simultaneously
-      filter = %{"type" => "ERC-1155,ERC-20"}
+      filter = %{"type" => "ERC-1155,KONET-20"}
       request = get(conn, "/api/v2/transactions/#{to_string(tx.hash)}/token-transfers", filter)
       assert response = json_response(request, 200)
 

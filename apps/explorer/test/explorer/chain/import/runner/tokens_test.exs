@@ -9,7 +9,7 @@ defmodule Explorer.Chain.Import.Runner.TokensTest do
     test "new tokens have their holder_count set to 0" do
       %Address{hash: contract_address_hash} = insert(:address)
       name = "Name"
-      type = "ERC-20"
+      type = "KONET-20"
 
       assert {:ok, %{tokens: [%Token{holder_count: 0}]}} =
                run_changes(%{contract_address_hash: contract_address_hash, type: type, name: name})

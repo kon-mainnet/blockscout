@@ -47,7 +47,7 @@ defmodule Explorer.Migrator.TokenTransferTokenType do
   defp build_update_query(token_transfer_ids) do
     """
     UPDATE token_transfers tt
-    SET token_type = CASE WHEN t.type = 'ERC-1155' AND token_ids IS NULL THEN 'ERC-20'
+    SET token_type = CASE WHEN t.type = 'ERC-1155' AND token_ids IS NULL THEN 'KONET-20'
                           ELSE t.type
                      END,
         block_consensus = b.consensus

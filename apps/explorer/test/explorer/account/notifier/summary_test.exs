@@ -84,7 +84,7 @@ defmodule Explorer.Account.Notifier.SummaryTest do
              ]
     end
 
-    test "ERC-20 Token transfer" do
+    test "KONET-20 Token transfer" do
       tx =
         %Transaction{
           from_address: _from_address,
@@ -122,11 +122,11 @@ defmodule Explorer.Account.Notifier.SummaryTest do
                  from_address_hash: from_address.hash,
                  method: "transfer",
                  name: "Infinite Token",
-                 subject: "ERC-20",
+                 subject: "KONET-20",
                  to_address_hash: to_address.hash,
                  transaction_hash: tx.hash,
                  tx_fee: fee,
-                 type: "ERC-20"
+                 type: "KONET-20"
                }
              ]
     end

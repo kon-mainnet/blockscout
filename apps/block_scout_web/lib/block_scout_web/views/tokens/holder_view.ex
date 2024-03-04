@@ -53,7 +53,7 @@ defmodule BlockScoutWeb.Tokens.HolderView do
 
   ## Examples
 
-    iex> token = build(:token, type: "ERC-20", decimals: Decimal.new(2))
+    iex> token = build(:token, type: "KONET-20", decimals: Decimal.new(2))
     iex> BlockScoutWeb.Tokens.HolderView.format_token_balance_value(100000, nil, token)
     "1,000"
 
@@ -62,7 +62,7 @@ defmodule BlockScoutWeb.Tokens.HolderView do
     1
 
   """
-  def format_token_balance_value(value, _id, %Token{type: "ERC-20", decimals: decimals}) do
+  def format_token_balance_value(value, _id, %Token{type: "KONET-20", decimals: decimals}) do
     format_according_to_decimals(value, decimals)
   end
 

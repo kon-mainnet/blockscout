@@ -73,7 +73,7 @@ defmodule BlockScoutWeb.Tokens.OverviewViewTest do
     end
 
     test "returns false when token is not unique" do
-      token = insert(:token, type: "ERC-20")
+      token = insert(:token, type: "KONET-20")
 
       assert OverviewView.display_inventory?(token) == false
     end

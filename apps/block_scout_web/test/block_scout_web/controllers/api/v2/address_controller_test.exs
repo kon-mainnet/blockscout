@@ -950,7 +950,7 @@ defmodule BlockScoutWeb.API.V2.AddressControllerTest do
     test "check token type filters", %{conn: conn} do
       address = insert(:address)
 
-      erc_20_token = insert(:token, type: "ERC-20")
+      erc_20_token = insert(:token, type: "KONET-20")
 
       erc_20_tt =
         for _ <- 0..50 do
@@ -962,7 +962,7 @@ defmodule BlockScoutWeb.API.V2.AddressControllerTest do
             block_number: tx.block_number,
             from_address: address,
             token_contract_address: erc_20_token.contract_address,
-            token_type: "ERC-20"
+            token_type: "KONET-20"
           )
         end
 
@@ -1000,8 +1000,8 @@ defmodule BlockScoutWeb.API.V2.AddressControllerTest do
           )
         end
 
-      # -- ERC-20 --
-      filter = %{"type" => "ERC-20"}
+      # -- KONET-20 --
+      filter = %{"type" => "KONET-20"}
       request = get(conn, "/api/v2/addresses/#{address.hash}/token-transfers", filter)
       assert response = json_response(request, 200)
 
@@ -1040,7 +1040,7 @@ defmodule BlockScoutWeb.API.V2.AddressControllerTest do
       # -- ------ --
 
       # two filters simultaneously
-      filter = %{"type" => "ERC-1155,ERC-20"}
+      filter = %{"type" => "ERC-1155,KONET-20"}
       request = get(conn, "/api/v2/addresses/#{address.hash}/token-transfers", filter)
       assert response = json_response(request, 200)
 
@@ -1078,7 +1078,7 @@ defmodule BlockScoutWeb.API.V2.AddressControllerTest do
     test "type and direction filters at the same time", %{conn: conn} do
       address = insert(:address)
 
-      erc_20_token = insert(:token, type: "ERC-20")
+      erc_20_token = insert(:token, type: "KONET-20")
 
       erc_20_tt =
         for _ <- 0..50 do
@@ -1090,7 +1090,7 @@ defmodule BlockScoutWeb.API.V2.AddressControllerTest do
             block_number: tx.block_number,
             from_address: address,
             token_contract_address: erc_20_token.contract_address,
-            token_type: "ERC-20"
+            token_type: "KONET-20"
           )
         end
 
@@ -1128,7 +1128,7 @@ defmodule BlockScoutWeb.API.V2.AddressControllerTest do
 
       check_paginated_response(response, response_2nd_page, erc_721_tt)
 
-      filter = %{"type" => "ERC-721,ERC-20", "filter" => "to"}
+      filter = %{"type" => "ERC-721,KONET-20", "filter" => "to"}
       request = get(conn, "/api/v2/addresses/#{address.hash}/token-transfers", filter)
       assert response = json_response(request, 200)
 
@@ -1139,7 +1139,7 @@ defmodule BlockScoutWeb.API.V2.AddressControllerTest do
 
       check_paginated_response(response, response_2nd_page, erc_721_tt)
 
-      filter = %{"type" => "ERC-721,ERC-20", "filter" => "from"}
+      filter = %{"type" => "ERC-721,KONET-20", "filter" => "from"}
       request = get(conn, "/api/v2/addresses/#{address.hash}/token-transfers", filter)
       assert response = json_response(request, 200)
 
@@ -1819,7 +1819,7 @@ defmodule BlockScoutWeb.API.V2.AddressControllerTest do
         for _ <- 0..50 do
           insert(:address_current_token_balance_with_token_id_and_fixed_token_type,
             address: address,
-            token_type: "ERC-20",
+            token_type: "KONET-20",
             token_id: nil
           )
           |> Repo.preload([:token])
@@ -1848,7 +1848,7 @@ defmodule BlockScoutWeb.API.V2.AddressControllerTest do
         end
         |> Enum.sort_by(fn x -> x.value end, :asc)
 
-      filter = %{"type" => "ERC-20"}
+      filter = %{"type" => "KONET-20"}
       request = get(conn, "/api/v2/addresses/#{address.hash}/tokens", filter)
       assert response = json_response(request, 200)
 

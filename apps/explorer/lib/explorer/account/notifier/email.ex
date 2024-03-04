@@ -51,7 +51,7 @@ defmodule Explorer.Account.Notifier.Email do
       "COIN" ->
         amount
 
-      "ERC-20" ->
+      "KONET-20" ->
         amount
 
       "ERC-721" ->

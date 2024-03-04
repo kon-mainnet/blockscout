@@ -114,7 +114,7 @@ defmodule BlockScoutWeb.TransactionStateControllerTest do
       block = insert(:block)
       address_a = insert(:address)
       address_b = insert(:address)
-      token = insert(:token, type: "ERC-20")
+      token = insert(:token, type: "KONET-20")
 
       insert(:fetched_balance,
         address_hash: address_a.hash,

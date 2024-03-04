@@ -165,7 +165,7 @@ defmodule Explorer.Chain.Import.Runner.Address.CurrentTokenBalancesTest do
                      value: value_3,
                      value_fetched_at: DateTime.utc_now(),
                      token_id: token_id_3,
-                     token_type: "ERC-20"
+                     token_type: "KONET-20"
                    },
                    %{
                      address_hash: address_hash,

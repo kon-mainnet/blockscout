@@ -17,12 +17,12 @@ defmodule BlockScoutWeb.AddressTokenBalanceViewTest do
 
   describe "filter_by_type/2" do
     test "filter tokens by the given type" do
-      token_balance_a = build(:token_balance, token: build(:token, type: "ERC-20"))
+      token_balance_a = build(:token_balance, token: build(:token, type: "KONET-20"))
       token_balance_b = build(:token_balance, token: build(:token, type: "ERC-721"))
 
       token_balances = [token_balance_a, token_balance_b]
 
-      assert AddressTokenBalanceView.filter_by_type(token_balances, "ERC-20") == [token_balance_a]
+      assert AddressTokenBalanceView.filter_by_type(token_balances, "KONET-20") == [token_balance_a]
     end
   end
 

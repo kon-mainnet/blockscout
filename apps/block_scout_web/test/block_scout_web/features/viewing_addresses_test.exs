@@ -409,7 +409,7 @@ defmodule BlockScoutWeb.ViewingAddressesTest do
       insert(:address_current_token_balance, address: lincoln, token_contract_address_hash: contract_address.hash)
 
       contract_address_2 = insert(:contract_address)
-      insert(:token, name: "token2", symbol: "T2", contract_address: contract_address_2, type: "ERC-20")
+      insert(:token, name: "token2", symbol: "T2", contract_address: contract_address_2, type: "KONET-20")
 
       transaction_2 =
         :transaction
@@ -456,7 +456,7 @@ defmodule BlockScoutWeb.ViewingAddressesTest do
       |> AddressPage.fill_balance_dropdown_search("T2")
       |> assert_has(AddressPage.token_balance(count: 1))
       |> assert_has(AddressPage.token_type(count: 1))
-      |> assert_has(AddressPage.token_type_count(type: "ERC-20", text: "1"))
+      |> assert_has(AddressPage.token_type_count(type: "KONET-20", text: "1"))
     end
 
     test "reset token balances filter when dropdown closes", %{session: session, lincoln: lincoln} do

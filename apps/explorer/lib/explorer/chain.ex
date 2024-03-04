@@ -4208,7 +4208,7 @@ defmodule Explorer.Chain do
       {"0xf907fc5b" <> _params, ^zero_wei} ->
         :erc20
 
-      # check for ERC-20 or for old ERC-721, ERC-1155 token versions
+      # check for KONET-20 or for old ERC-721, ERC-1155 token versions
       {unquote(TokenTransfer.transfer_function_signature()) <> params, ^zero_wei} ->
         types = [:address, {:uint, 256}]
 
@@ -4249,7 +4249,7 @@ defmodule Explorer.Chain do
 
     if token_transfer do
       case token_transfer.token do
-        %Token{type: "ERC-20"} -> :erc20
+        %Token{type: "KONET-20"} -> :erc20
         %Token{type: "ERC-721"} -> :erc721
         %Token{type: "ERC-1155"} -> :erc1155
         _ -> nil
@@ -4325,7 +4325,7 @@ defmodule Explorer.Chain do
 
   defp erc_20_token_type?(type) do
     case type do
-      "ERC-20" -> true
+      "KONET-20" -> true
       _ -> false
     end
   end

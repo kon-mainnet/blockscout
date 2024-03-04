@@ -33,7 +33,7 @@ defmodule Explorer.Token.BalanceReaderTest do
             token_contract_address_hash: token_contract_address_hash,
             address_hash: address_hash,
             block_number: block_number,
-            token_type: "ERC-20"
+            token_type: "KONET-20"
           }
         ])
 
@@ -53,7 +53,7 @@ defmodule Explorer.Token.BalanceReaderTest do
             token_contract_address_hash: token_contract_address_hash,
             address_hash: address_hash,
             block_number: block_number,
-            token_type: "ERC-20"
+            token_type: "KONET-20"
           }
         ])
 

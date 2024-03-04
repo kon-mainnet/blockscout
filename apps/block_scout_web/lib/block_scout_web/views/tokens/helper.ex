@@ -9,7 +9,7 @@ defmodule BlockScoutWeb.Tokens.Helper do
   @doc """
   Returns the token transfers' amount according to the token's type and decimals.
 
-  When the token's type is ERC-20, then we are going to format the amount according to the token's
+  When the token's type is KONET-20, then we are going to format the amount according to the token's
   decimals considering 0 when the decimals is nil. Case the amount is nil, this function will
   return the symbol `--`.
 
@@ -31,29 +31,29 @@ defmodule BlockScoutWeb.Tokens.Helper do
   end
 
   # TODO: remove this clause along with token transfer denormalization
-  defp do_token_transfer_amount(%Token{type: "ERC-20"}, nil, nil, nil, _token_ids) do
+  defp do_token_transfer_amount(%Token{type: "KONET-20"}, nil, nil, nil, _token_ids) do
     {:ok, "--"}
   end
 
-  defp do_token_transfer_amount(_token, "ERC-20", nil, nil, _token_ids) do
+  defp do_token_transfer_amount(_token, "KONET-20", nil, nil, _token_ids) do
     {:ok, "--"}
   end
 
   # TODO: remove this clause along with token transfer denormalization
-  defp do_token_transfer_amount(%Token{type: "ERC-20", decimals: nil}, nil, amount, _amounts, _token_ids) do
+  defp do_token_transfer_amount(%Token{type: "KONET-20", decimals: nil}, nil, amount, _amounts, _token_ids) do
     {:ok, CurrencyHelper.format_according_to_decimals(amount, Decimal.new(0))}
   end
 
-  defp do_token_transfer_amount(%Token{decimals: nil}, "ERC-20", amount, _amounts, _token_ids) do
+  defp do_token_transfer_amount(%Token{decimals: nil}, "KONET-20", amount, _amounts, _token_ids) do
     {:ok, CurrencyHelper.format_according_to_decimals(amount, Decimal.new(0))}
   end
 
   # TODO: remove this clause along with token transfer denormalization
-  defp do_token_transfer_amount(%Token{type: "ERC-20", decimals: decimals}, nil, amount, _amounts, _token_ids) do
+  defp do_token_transfer_amount(%Token{type: "KONET-20", decimals: decimals}, nil, amount, _amounts, _token_ids) do
     {:ok, CurrencyHelper.format_according_to_decimals(amount, decimals)}
   end
 
-  defp do_token_transfer_amount(%Token{decimals: decimals}, "ERC-20", amount, _amounts, _token_ids) do
+  defp do_token_transfer_amount(%Token{decimals: decimals}, "KONET-20", amount, _amounts, _token_ids) do
     {:ok, CurrencyHelper.format_according_to_decimals(amount, decimals)}
   end
 
@@ -102,17 +102,17 @@ defmodule BlockScoutWeb.Tokens.Helper do
   end
 
   # TODO: remove this clause along with token transfer denormalization
-  defp do_token_transfer_amount_for_api(%Token{type: "ERC-20"}, nil, nil, nil, _token_ids) do
+  defp do_token_transfer_amount_for_api(%Token{type: "KONET-20"}, nil, nil, nil, _token_ids) do
     {:ok, nil}
   end
 
-  defp do_token_transfer_amount_for_api(_token, "ERC-20", nil, nil, _token_ids) do
+  defp do_token_transfer_amount_for_api(_token, "KONET-20", nil, nil, _token_ids) do
     {:ok, nil}
   end
 
   # TODO: remove this clause along with token transfer denormalization
   defp do_token_transfer_amount_for_api(
-         %Token{type: "ERC-20", decimals: decimals},
+         %Token{type: "KONET-20", decimals: decimals},
          nil,
          amount,
          _amounts,
@@ -123,7 +123,7 @@ defmodule BlockScoutWeb.Tokens.Helper do
 
   defp do_token_transfer_amount_for_api(
          %Token{decimals: decimals},
-         "ERC-20",
+         "KONET-20",
          amount,
          _amounts,
          _token_ids

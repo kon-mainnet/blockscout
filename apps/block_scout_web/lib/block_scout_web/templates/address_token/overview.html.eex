@@ -56,7 +56,7 @@
     %>
     <%= render BlockScoutWeb.AddressTokenView, "overview_item.html",
         title: gettext("Tokens"),
-        tooltip: gettext("Shows the tokens held in the address (includes ERC-20, ERC-721 and ERC-1155)."),
+        tooltip: gettext("Shows the tokens held in the address (includes KONET-20, ERC-721 and ERC-1155)."),
         value: "N/A",
         data_test: "address-tokens-panel-tokens-worth",
         classes: ["fs-14"]

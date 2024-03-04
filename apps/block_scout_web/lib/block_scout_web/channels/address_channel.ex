@@ -234,7 +234,7 @@ defmodule BlockScoutWeb.AddressChannel do
         %{address_current_token_balances: address_current_token_balances},
         %Phoenix.Socket{handler: BlockScoutWeb.UserSocketV2} = socket
       ) do
-    push_current_token_balances(socket, address_current_token_balances, "erc_20", "ERC-20")
+    push_current_token_balances(socket, address_current_token_balances, "erc_20", "KONET-20")
     push_current_token_balances(socket, address_current_token_balances, "erc_721", "ERC-721")
     push_current_token_balances(socket, address_current_token_balances, "erc_1155", "ERC-1155")
 
