@@ -18,9 +18,9 @@ defmodule Explorer.Chain.Address.TokenBalanceTest do
       assert result.block_number == token_balance.block_number
     end
 
-    test "does not ignore token balance when the address isn't the burn address with Token ERC-20" do
+    test "does not ignore token balance when the address isn't the burn address with Token KONET-20" do
       address = insert(:address, hash: "0xc45e4830dff873cf8b70de2b194d0ddd06ef651e")
-      token = insert(:token, type: "ERC-20")
+      token = insert(:token, type: "KONET-20")
 
       token_balance =
         insert(
@@ -56,9 +56,9 @@ defmodule Explorer.Chain.Address.TokenBalanceTest do
       assert result == []
     end
 
-    test "does not ignore the burn_address when the token type is ERC-20" do
+    test "does not ignore the burn_address when the token type is KONET-20" do
       burn_address = insert(:address, hash: "0x0000000000000000000000000000000000000000")
-      token = insert(:token, type: "ERC-20")
+      token = insert(:token, type: "KONET-20")
 
       token_balance =
         insert(

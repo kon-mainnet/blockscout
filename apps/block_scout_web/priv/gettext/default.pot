@@ -859,7 +859,7 @@ msgstr ""
 
 #, elixir-format
 #: lib/block_scout_web/views/transaction_view.ex:221
-msgid "ERC-20 "
+msgid "KONET-20 "
 msgstr ""
 
 #, elixir-format

@@ -89,7 +89,7 @@ defmodule BlockScoutWeb.AddressTokenControllerTest do
       second_page_tokens =
         1..50
         |> Enum.reduce([], fn i, acc ->
-          token = insert(:token, name: "A Token#{i}", type: "ERC-20")
+          token = insert(:token, name: "A Token#{i}", type: "KONET-20")
 
           insert(
             :address_current_token_balance,
@@ -134,7 +134,7 @@ defmodule BlockScoutWeb.AddressTokenControllerTest do
       address = insert(:address)
 
       Enum.each(1..51, fn i ->
-        token = insert(:token, name: "A Token#{i}", type: "ERC-20")
+        token = insert(:token, name: "A Token#{i}", type: "KONET-20")
 
         insert(
           :address_current_token_balance,

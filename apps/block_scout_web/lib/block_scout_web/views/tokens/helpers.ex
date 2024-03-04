@@ -9,7 +9,7 @@ defmodule BlockScoutWeb.Tokens.Helpers do
   @doc """
   Returns the token transfers' amount according to the token's type and decimals.
 
-  When the token's type is ERC-20, then we are going to format the amount according to the token's
+  When the token's type is KONET-20, then we are going to format the amount according to the token's
   decimals considering 0 when the decimals is nil. Case the amount is nil, this function will
   return the symbol `--`.
 
@@ -20,15 +20,15 @@ defmodule BlockScoutWeb.Tokens.Helpers do
     do_token_transfer_amount(token, amount, token_id)
   end
 
-  defp do_token_transfer_amount(%Token{type: "ERC-20"}, nil, _token_id) do
+  defp do_token_transfer_amount(%Token{type: "KONET-20"}, nil, _token_id) do
     {:ok, "--"}
   end
 
-  defp do_token_transfer_amount(%Token{type: "ERC-20", decimals: nil}, amount, _token_id) do
+  defp do_token_transfer_amount(%Token{type: "KONET-20", decimals: nil}, amount, _token_id) do
     {:ok, CurrencyHelpers.format_according_to_decimals(amount, Decimal.new(0))}
   end
 
-  defp do_token_transfer_amount(%Token{type: "ERC-20", decimals: decimals}, amount, _token_id) do
+  defp do_token_transfer_amount(%Token{type: "KONET-20", decimals: decimals}, amount, _token_id) do
     {:ok, CurrencyHelpers.format_according_to_decimals(amount, decimals)}
   end
 

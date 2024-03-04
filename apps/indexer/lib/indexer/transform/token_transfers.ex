@@ -1,6 +1,6 @@
 defmodule Indexer.Transform.TokenTransfers do
   @moduledoc """
-  Helper functions for transforming data for ERC-20 and ERC-721 token transfers.
+  Helper functions for transforming data for KONET-20 and ERC-721 token transfers.
   """
 
   require Logger
@@ -58,7 +58,7 @@ defmodule Indexer.Transform.TokenTransfers do
       acc
   end
 
-  # ERC-20 token transfer
+  # KONET-20 token transfer
   defp parse_params(%{second_topic: second_topic, third_topic: third_topic, fourth_topic: nil} = log)
        when not is_nil(second_topic) and not is_nil(third_topic) do
     [amount] = decode_data(log.data, [{:uint, 256}])
@@ -72,12 +72,12 @@ defmodule Indexer.Transform.TokenTransfers do
       to_address_hash: truncate_address_hash(log.third_topic),
       token_contract_address_hash: log.address_hash,
       transaction_hash: log.transaction_hash,
-      token_type: "ERC-20"
+      token_type: "KONET-20"
     }
 
     token = %{
       contract_address_hash: log.address_hash,
-      type: "ERC-20"
+      type: "KONET-20"
     }
 
     {token, token_transfer}

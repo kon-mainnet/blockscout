@@ -986,7 +986,7 @@ defmodule Explorer.Staking.ContractState do
         |> MetadataRetriever.get_functions_of()
         |> Map.merge(%{
           contract_address_hash: token_contract_address_hash,
-          type: "ERC-20"
+          type: "KONET-20"
         })
 
       import_result =
@@ -1093,7 +1093,7 @@ defmodule Explorer.Staking.ContractState do
       token_params =
         Map.merge(token_functions, %{
           contract_address_hash: address,
-          type: "ERC-20"
+          type: "KONET-20"
         })
 
       # try to write the token info to DB

@@ -63,7 +63,7 @@ defmodule Explorer.Chain.Address.TokenTest do
 
       token2 =
         :token
-        |> insert(name: "token-c", type: "ERC-20", decimals: 0, symbol: "TC")
+        |> insert(name: "token-c", type: "KONET-20", decimals: 0, symbol: "TC")
         |> Repo.preload(:contract_address)
 
       insert(
@@ -301,7 +301,7 @@ defmodule Explorer.Chain.Address.TokenTest do
     end
 
     test "add more conditions to the query when PagingOptions.key is not nil" do
-      token1 = insert(:token, name: "token-a", type: "ERC-20", decimals: 0, symbol: "TA")
+      token1 = insert(:token, name: "token-a", type: "KONET-20", decimals: 0, symbol: "TA")
 
       token2 = insert(:token, name: "token-c", type: "ERC-721", decimals: 0, symbol: "TC")
 
@@ -315,9 +315,9 @@ defmodule Explorer.Chain.Address.TokenTest do
     end
 
     test "tokens with nil name come after other tokens of same type" do
-      token1 = insert(:token, name: "token-a", type: "ERC-20", decimals: 0, symbol: "TA")
+      token1 = insert(:token, name: "token-a", type: "KONET-20", decimals: 0, symbol: "TA")
 
-      token2 = insert(:token, name: nil, type: "ERC-20", decimals: 0, symbol: "TC")
+      token2 = insert(:token, name: nil, type: "KONET-20", decimals: 0, symbol: "TC")
 
       options = %PagingOptions{key: {token1.name, token1.type, token1.inserted_at}}
 

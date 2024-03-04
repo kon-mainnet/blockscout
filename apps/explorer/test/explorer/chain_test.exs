@@ -1624,7 +1624,7 @@ defmodule Explorer.ChainTest do
         params: [
           %{
             contract_address_hash: "0x8bf38d4764929064f2d4d3a56520a76ab3df415b",
-            type: "ERC-20"
+            type: "KONET-20"
           }
         ]
       },
@@ -1782,7 +1782,7 @@ defmodule Explorer.ChainTest do
                         <<139, 243, 141, 71, 100, 146, 144, 100, 242, 212, 211, 165, 101, 32, 167, 106, 179, 223, 65,
                           91>>
                     },
-                    type: "ERC-20",
+                    type: "KONET-20",
                     inserted_at: %{},
                     updated_at: %{}
                   }
