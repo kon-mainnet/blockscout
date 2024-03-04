@@ -13,9 +13,7 @@ defmodule Explorer.Repo.ConfigHelper do
     password: "PGPASSWORD",
     host: "PGHOST",
     port: "PGPORT",
-    database: "PGDATABASE",
-    ssl: true,
-
+    database: "PGDATABASE"
   ]
 
   def get_db_config(opts) do
