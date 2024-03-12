@@ -41,10 +41,14 @@ services:
     links:
       - db:database
     environment:
-        ETHEREUM_JSONRPC_HTTP_URL: http://host.docker.internal:8545/
-        ETHEREUM_JSONRPC_TRACE_URL: http://host.docker.internal:8545/
-        ETHEREUM_JSONRPC_WS_URL: ws://host.docker.internal:8545/
-        CHAIN_ID: '1337'
+        ETHEREUM_JSONRPC_HTTP_URL: http://3.35.90.29:8545
+        ETHEREUM_JSONRPC_WS_URL: ws://3.35.90.29:8546
+        ETHEREUM_JSONRPC_TRACE_URL: http://3.35.90.29:8545
+        ETHEREUM_JSONRPC_VARIANT: "parity"
+        INDEXER_DISABLE_BLOCK_REWARD_FETCHER: true
+        CHAIN_ID: 17217
+        CHAIN_SPEC_PATH: /home/ubuntu/camp-mainnet.json
+        COIN: "KONET"
 
   visualizer:
     extends:

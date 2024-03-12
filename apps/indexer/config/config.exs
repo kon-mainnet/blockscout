@@ -6,6 +6,7 @@ config :indexer,
   ecto_repos: [Explorer.Repo]
 
 # config :indexer, Indexer.Fetcher.ReplacedTransaction.Supervisor, disabled?: true
+config :indexer, Indexer.Fetcher.BlockReward.Supervisor, disabled?: true
 
 config :indexer, Indexer.Tracer,
   service: :indexer,
