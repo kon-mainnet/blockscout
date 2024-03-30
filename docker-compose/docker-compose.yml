@@ -49,6 +49,7 @@ services:
         CHAIN_ID: 17217
         CHAIN_SPEC_PATH: /home/ubuntu/camp-mainnet.json
         COIN: "KONET"
+        DISABLE_EXCHANGE_RATES: true
 
   visualizer:
     extends:
